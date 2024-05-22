@@ -83,7 +83,7 @@ func (r *PostgresArticleRepository) CreateArticle(ctx context.Context, user *dom
                      title, text, 
                      views, 
                      created_at, 
-                     updated_at) values ($1, $2, $3, $4, $5, $6)`
+                     updated_at) values ($1, $2, $3, $4, $5, $6) returning id`
 
 	var newID int
 
